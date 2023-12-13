@@ -12,6 +12,13 @@ class AdhanScreen extends StatefulWidget {
 
 class _AdhanScreenState extends State<AdhanScreen> {
   @override
+  void initState() {
+    // TODO: implement initState
+    di.sl<AdhanCubit>().getAdhanTimes();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocProvider(
@@ -23,10 +30,10 @@ class _AdhanScreenState extends State<AdhanScreen> {
             );
           } else if (state is AdhanLoaded) {
             return Text(state.timingsResponse.times!.first.fajr.toString());
-          }else if(state is AdhanError){
-            return  Center(
-            child: Text(state.error.toString()),
-          );
+          } else if (state is AdhanError) {
+            return Center(
+              child: Text(state.error.toString()),
+            );
           }
           return const Center(
             child: Text(""),

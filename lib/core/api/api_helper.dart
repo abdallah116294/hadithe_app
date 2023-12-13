@@ -55,9 +55,9 @@ class ApiHelper {
   Future<Map<String, dynamic>> getAdhantime() async {
     try {
       var response = await _dio.get(
-          ApiEndpoint.adhanBaseurl + ApiEndpoint.endPonuitAdhan,
-          queryParameters: {"address": "cairo"});
-      debugPrint(response.data);
+          ApiEndpoint.adhan2BaseUrl + ApiEndpoint.adhan2EndPoint,
+          queryParameters: {"key":ApiEndpoint.apikeyadhan });
+      debugPrint(response.data.toString());
       if (response.statusCode == 200) {  
         return response.data;
       }else {
