@@ -36,12 +36,18 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.3
+<<<<<<< HEAD
   flutter_zoom_drawer: ^3.1.1
+=======
+>>>>>>> 864c82fcb9042112f7757c92715e29adb72d7ab5
   geocoding: ^2.1.1
   geolocator: ^10.1.0
   get_it: ^7.6.4
   just_audio: ^0.9.35
+<<<<<<< HEAD
   lottie: ^2.7.0
+=======
+>>>>>>> 864c82fcb9042112f7757c92715e29adb72d7ab5
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -65,9 +71,13 @@ flutter:
     - assets/images/headth.png
     - assets/images/adahn.png
     - assets/adhkar.json
+<<<<<<< HEAD
     - assets/prophet_stories.json
     - assets/audio/
     - assets/animation/
+=======
+    - assets/audio/
+>>>>>>> 864c82fcb9042112f7757c92715e29adb72d7ab5
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
