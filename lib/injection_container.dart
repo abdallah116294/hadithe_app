@@ -17,14 +17,11 @@ import 'package:hadithe/Features/hadithe/domain/repository/get_topic_repository.
 import 'package:hadithe/Features/hadithe/domain/usecase/get_topic_usecase.dart';
 import 'package:hadithe/Features/hadithe/peresentation/cubit/each_topic_data_cubit.dart';
 import 'package:hadithe/Features/hadithe/peresentation/cubit/get_topics_cubit.dart';
-<<<<<<< HEAD
 import 'package:hadithe/Features/prophetstories/data/datasource/local_data_source.dart';
 import 'package:hadithe/Features/prophetstories/data/repository/repository_impl.dart';
 import 'package:hadithe/Features/prophetstories/domain/repository/prophet_repository.dart';
 import 'package:hadithe/Features/prophetstories/domain/usecase/prophet_usecase.dart';
 import 'package:hadithe/Features/prophetstories/presentation/cubit/get_prophet_stories_cubit.dart';
-=======
->>>>>>> 864c82fcb9042112f7757c92715e29adb72d7ab5
 import 'package:hadithe/core/api/api_helper.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -76,7 +73,6 @@ Future<void> init() async {
   sl.registerLazySingleton<GetAdhanRepository>(
       () => GetAdhanRepositoryImpl(adhanRemoteDataSource: sl()));
   //rmote data source
-<<<<<<< HEAD
   sl.registerLazySingleton<AdhanRemoteDataSource>(
       () => AdhanRemoteDataSourceImpl(apiHelper: sl()));
   //!Prophet Stories
@@ -88,9 +84,6 @@ Future<void> init() async {
   sl.registerLazySingleton<ProphetRepository>(() =>ProphetRepositoryImpl(localDatSourceOImpl: sl()) );
   //data source
   sl.registerLazySingleton<ProphetLocalDataSource>(() =>ProphetLocalDataSourceImpl() );
-=======
-  sl.registerLazySingleton<AdhanRemoteDataSource>(() => AdhanRemoteDataSourceImpl(apiHelper: sl()));
->>>>>>> 864c82fcb9042112f7757c92715e29adb72d7ab5
   //dio
   sl.registerLazySingleton(() => Dio());
   sl.registerLazySingleton(() => ApiHelper(sl()));
